@@ -1,0 +1,16 @@
+header, nav
+{
+    background-color: var(--bs-gray-800);
+    color: var(--bs-white);
+}
+
+header
+{
+    font-size: 1.5rem;
+}
+
+.img_logo
+{
+    /*color: var(--bs-white);*/
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(304deg) brightness(108%) contrast(101%);
+}

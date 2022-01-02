@@ -1,0 +1,24 @@
+html, body 
+{
+    font-size: 14pt;
+    height: 100%;
+}
+
+main
+{
+    margin: 0;
+    background-image: url("../Image/bg_2.jpg");
+    background-size: cover;
+    /*background-repeat: repeat;*/
+    min-height: 0;
+}
+
+.div_carousel
+{
+    background-color: rgba(52, 58, 64, 0.97);
+    color: var(--bs-white);
+    font-size: 2.5rem;
+    border-radius: 5pt;
+    border-left: 0.5rem solid var(--bs-white);
+    border-right: 0.5rem solid var(--bs-white);
+}

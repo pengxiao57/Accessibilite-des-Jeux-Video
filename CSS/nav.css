@@ -1,0 +1,43 @@
+nav{
+    position: sticky;
+    top:0;
+    right: auto;
+    font-size: 1.3rem;
+}
+
+nav li a
+{
+    color: var(--bs-white);
+    border-bottom: 0.2rem solid transparent;
+}
+
+nav li a:hover
+{
+    color: var(--bs-white);
+}
+
+/*
+nav li a:focus:not(:cli)
+{
+    color: var(--bs-white);
+    border-bottom: 0.2rem solid var(--bs-white)  !important;
+}*/
+
+.navlist {
+	/*display: inline-block;*/
+}
+.navlist:after {
+content: '';
+display: block;
+height: 0.15rem;
+width: 0;
+background: transparent;
+transition: width .5s ease, background-color .5s ease;
+                                        float:right;
+}
+.navlist:hover:after {
+width: 100%;
+background: var(--bs-white);
+transition: width .5s ease, background-color .5s ease;
+                                        float: left;
+}
