@@ -8,24 +8,193 @@
         <link href="CSS/header.css" rel="stylesheet">
         <link href="CSS/nav.css" rel="stylesheet">
         <link href="CSS/footer.css" rel="stylesheet">
+        <link href="CSS/article.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JavaScript/load.js"></script>
     </head>
     <body>
+        <a class="evitement" href="#contenu">Aller au contenu</a>
         <!----------------------------------------------- header ------------------------------------------------->
-        <header id="header" class="pb-2">
+        <header role="banner" id="header" class="pb-2">
         </header>
 
         <!----------------------------------------------- nav ------------------------------------------------->
-        <nav class="container-fluid pt-3 pb-2"></nav>
+        <nav role="navigation" class="container-fluid pt-3 pb-2 position-relative"></nav>
         
         <!----------------------------------------------- main ------------------------------------------------->
-        <main class="container-fluid h-100">
-        <!--Contenu-->
+        <main role="main" class="container-fluid h-100">
+            <a id="contenu" tabindex="-1"></a>
+            <div class="row d-flex align-items-stretch">
+                <!---------------------------------Sidebar------------------------------------------->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 div_vertical_nav" role="navigation" tabindex="0">
+                    <ul class="stepper d-flex flex-column mt-5 ml-2 list-unstyled position-sticky top-0 pt-3">
+                        <li class="d-flex mb-1">
+                            <div class="d-flex flex-column align-items-center div_circle_container">
+                                <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                <div class="line h-100"></div>
+                            </div>
+                            <div class="div_vertical_nav_a">
+                                <a href="#remapping" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Pouvoir réaffecter les touches</a>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#sensibilite" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Avoir la possibilité d'ajuster la sensibilité</a> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#alternative" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Fournir des alternatives compte tenu des spécificités des joueurs</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#police" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Avoir une police de texte lisible et proposer d'autres choix</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#contraste" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Avoir un contraste élévé entre le texte et le fond d'écran</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#sous-titre" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Avoir les sous-titres pour les cinématiques</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100 d-none"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#difficulte" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Pouvoir choisir la difficulté</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------Contenu------------------------------------------->
+                <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                    <!--Titre de la page-->
+                    <h2 class="text-center mb-5 mt-2"><strong>Les bonnes pratiques pour concevoir un jeu accessible</strong></h2>
+                    
+                    <p>
+                        Un site de bonnes pratiques pour améliorer l'accessibilité dans les jeux a été mis en ligne, ce dernier
+                        est rédigé par un groupe de designers et de développeurs bénévols, il est consultable gratuitement via 
+                        le lien <a href="https://gameaccessibilityguidelines.com" lang="en">Game Accessibility Guidelines</a> et 
+                        nous donnerons ci-dessous quelques exemples
+                    </p>
+
+                    <!--Partie 1 : La réaffectation des touches-->
+                    <h3 id="remapping"><strong>Pouvoir réaffecter les touches</strong></h3>
+                    <p>
+                        Il est important de laisser les joueurs reconfigurer les touches. Non seulement cela permet aux joueurs 
+                        traditionnels de jouer convenablement, mais c'est aussi très utile pour les joueurs en situation de handicap 
+                        de pouvoir adapter le jeu selon ses capacités.
+                    </p>
+
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/Remapping.jpg" 
+                        alt=""/>
+
+                    <!--Partie 2 : L'ajustement de la sensibilité-->
+                    <h3 id="sensibilite"><strong>Avoir la possibilité d'ajuster la sensibilité</strong></h3>
+                    <p>
+                        C'est un paramétrage essentiel dans les jeux de nos jours, car le sensibilité de mouvement varie d'une 
+                        personne à l'autre, et c'est autant plus vrai pour les joueurs en situation de handicap, notamment des 
+                        joueurs ayant des handicaps moteur.
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/sensibilite.jpg" 
+                        alt=""/>
+
+                    <!--Partie 3 : Fournir des alternatives compte tenu des spécificités des joueurs-->
+                    <h3 id="alternative"><strong>Fournir des alternatives compte tenu des spécificités des joueurs</strong></h3>
+                    <p>
+                        De nos jours, on a des joueurs en situation de handicap qui ont chacun leur propre spécificité, leurs prores 
+                        capacités. Par exemple, pour un joueur dont ses mains tremblent constamment, il faudra trouver une alternative 
+                        d'interaction. Un très bon exemple est donné par le jeu "uncharted", dans ce dernier, la fonction "appuyer 
+                        longement" peut être remplacée par "Plusieurs appuies successives".
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/alternative.png" 
+                        alt=""/>
+
+                    <!--Partie 3 : Avoir une police de texte lisible et proposer d'autres choix-->
+                    <h3 id="police"><strong>Avoir une police de texte lisible et proposer d'autres choix</strong></h3>
+                    <p>
+                        Cette fonctionnalité est souvent manquante dans les jeux vidéo actuels. Dans la plupart du temps, le joueur 
+                        ne peut que jouer avec la police de texte par défaut. C'est pourquoi il est important d'avoir une police de 
+                        texte par défaut lisible et de proposer d'autres polices, notamment pour les joueurs dyslexiques.
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/police.png" 
+                        alt=""/>
+
+                    <!--Partie 4 : Avoir un contraste élévé entre le texte et le fond d'écran-->
+                    <h3 id="contraste"><strong>Avoir un contraste élévé entre le texte et le fond d'écran</strong></h3>
+                    <p>
+                        Tout comme la recommandation pour un site web, il est aussi important d'afficher les textes dans un fond 
+                        avec un contraste élevé pour aider des joueurs malvoyants à profiter le jeu.
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/contraste.png" 
+                        alt=""/>
+
+                    <!--Partie 5 : Sous-titre pour les cinématiques -->
+                    <h3 id="sous-titre"><strong>Avoir les sous-titres pour les cinématiques</strong></h3>
+                    <p>
+                        Les sous-titres pour les cinématiques sont primordials, non seulement ils permettent aux joueurs qui jouent 
+                        dans une langue étrangère de comprendre les scénarios, mais ils aident aussi les malentendants à suivre le 
+                        l'évolution du jeu. Tout comme le critère sur le contraste, les sous-titres doivent être affichés sur un fond 
+                        à contraste élevé.
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/sous-titre.jpg" 
+                        alt=""/>
+
+                    <!--Partie 6 : Pouvoir choisir la difficulté -->
+                    <h3 id="difficulte"><strong>Pouvoir choisir la difficulté</strong></h3>
+                    <p>
+                        Il est très intéressant de pouvoir choisir la difficulté en jeu. Il permet aux joueurs d'évoluer progressivement 
+                        dans le jeu. Mais aussi, cela permet aux personnes ayant des déficiences intellectuels à suivre convenablement le 
+                        jeu. 
+                    </p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/difficulty.jpg" 
+                        alt=""/>
+                </div>
+            </div>
         </main>
 
         <!----------------------------------------------- footer ------------------------------------------------->
-        <footer class="p-3"></footer>
+        <footer role="contentinfo" class="p-3"></footer>
 
         
 

@@ -8,24 +8,152 @@
         <link href="CSS/header.css" rel="stylesheet">
         <link href="CSS/nav.css" rel="stylesheet">
         <link href="CSS/footer.css" rel="stylesheet">
+        <link href="CSS/article.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JavaScript/load.js"></script>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
+        <a class="evitement" href="#contenu">Aller au contenu</a>
         <!----------------------------------------------- header ------------------------------------------------->
-        <header id="header" class="pb-2">
+        <header role="banner" id="header" class="pb-2">
         </header>
 
         <!----------------------------------------------- nav ------------------------------------------------->
-        <nav class="container-fluid pt-3 pb-2"></nav>
+        <nav role="navigation" class="container-fluid pt-3 pb-2 position-relative"></nav>
         
         <!----------------------------------------------- main ------------------------------------------------->
-        <main class="container-fluid h-100">
-        <!--Contenu-->
+        <main role="main" class="container-fluid h-100">
+            <a id="contenu" tabindex="-1"></a>
+            <div class="row d-flex align-items-stretch">
+                <!---------------------------------Sidebar------------------------------------------->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 div_vertical_nav" role="navigation" tabindex="0">
+                    <ul class="stepper d-flex flex-column mt-5 ml-2 list-unstyled position-sticky top-0 pt-3">
+                        <li class="d-flex mb-1">
+                            <div class="d-flex flex-column align-items-center div_circle_container">
+                                <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                <div class="line h-100"></div>
+                            </div>
+                            <div class="div_vertical_nav_a">
+                                <a href="#consommateurs" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Des consommateurs potentiels</a>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#graphiques" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Quelques graphiques</a> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100 d-none"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#tousLesJeuxAccessibles" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Tous les jeux peuvent-ils devenir accessibles</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------Contenu------------------------------------------->
+                <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                    <!--Titre de la page-->
+                    <h2 class="text-center mb-5 mt-2"><strong>Accessibilité dans les jeux vidéo : Pourquoi est-ce important ?</strong></h2>
+                    <!--Partie 1 : Des consommateurs potentiels-->
+                    <h3 id="consommateurs"><strong>Des consommateurs potentiels qui attendent des solutions</strong></h3>
+                    <p>
+                        Beaucoup de jeux ne sont pas satisfaisants sur le plan d’accessibilité. Pourtant, en comptant plus d’un 
+                        milliard de personnes en situation de handicap dans le monde, ce sont clairement des consommateurs potentiels 
+                        qui, des nos jours, ne trouvent malheureusement pas beaucoup de solutions pour jouer à leurs jeux favoris, 
+                        certains vont jusqu'à abandonner les jeux vidéo à cause du manque d'accessibilité,  c’est donc un enjeu 
+                        énorme d’inclure ces personnes dans le monde des jeux vidéo.
+                    </p>
+
+                    <!--Partie 2 : Quelques graphiques-->
+                    <h3 id="graphiques"><strong>Quelques graphiques</strong></h3>
+                    
+                    <p>L'entreprise "Be player One" a réalisé en 2021 un questionnaire en ligne permettant aux joueurs et aux joueuses
+                        en situation de handicap de s'exprimer leurs frustrations et leurs attentes vis à vis des jeux vidéo.
+                    </p>
+
+                    <p>
+                        L'analyse des données se porte sur 331 réponses des joueurs et des joueuses en situation de handicap.
+                    </p>
+
+                    <h4><strong>Les principales raisons qui empêchent de profiter les jeux vidéo</strong></h4>
+                    <p>100% des participants pensent que les jeux ne sont pas accessibles.</p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/Barrière Principale de l_accessibilité.png" 
+                        alt="Les principales raisons pour les joueurs et les joueuses en situation de handicap de profiter les jeux 
+                        (description détaillée ci-après)"/>
+                    
+                    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#collapseRaisons" aria-expanded="false">
+                        Lire la graphique au format texte
+                    </button>
+                    <ul id="collapseRaisons" class="collapse">
+                        <li><strong>100% : </strong>Les jeux ne sont pas accessibles</li>
+                        <li><strong>61% : </strong>Manque d'informations sur les fonctions d'accessibilité des jeux vidéo</li>
+                        <li><strong>59% : </strong>Pas de matériel de jeu adapté à leur situation</li>
+                        <li><strong>27% : </strong>Une solution de jeu adaptée à leur situation coûterait trop cher</li>
+                        <li><strong>17% : </strong>Pas trouvé de prestataire en capacité de les accompagner</li>
+                    </ul>
+
+
+                    <h4><strong>Niveau de frustration sur l'accessibilité des jeux vidéo</strong></h4>
+                    <p>77% des participants trouvent que les jeux vidéo sont frustrants sur le plan d'accessibilité.</p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/Niveau_de_Frustration_Joueur.png" alt="Niveau de frustration chez les joueurs et
+                            les joueuses en situation de handicap (description détaillée ci-après)"/>
+                    
+                    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#collapseNiveauFrustration" aria-expanded="false">
+                        Lire la graphique au format texte
+                    </button>
+                    <ul id="collapseNiveauFrustration" class="collapse">
+                        <li><strong>18% : </strong>Extrêmement frustrant</li>
+                        <li><strong>27% : </strong>Très frustratnt</li>
+                        <li><strong>32% : </strong>Plutôt frustrant</li>
+                        <li><strong>19% : </strong>Un peu frustrant</li>
+                        <li><strong>4% : </strong>Pas du tout frustrant</li>
+                    </ul>
+
+                    <h4><strong>Opinion de l'existence de l'accessibilité dans les jeux vidéo</strong></h4>
+                    <p>77% des participants trouvent que l'accessibilité est insuffisante dans les jeux.</p>
+                    <img class="img-fluid mx-auto d-block mb-4 img_graphique" src="Image/Opinion des joueurs sur l_accessibilité dans les jeux vidéo.png" 
+                    alt="Opinion des personnes en situation de handicap à propos de l'accessibilité dans les jeux vidéo (description détaillée ci-après)"/>
+                    
+                    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#collapseOpinion" aria-expanded="false">
+                        Lire la graphique au format texte
+                    </button>
+                    <ul id="collapseOpinion" class="collapse">
+                        <li><strong>14% : </strong>Inexistant</li>
+                        <li><strong>63% : </strong>Insuffisant</li>
+                        <li><strong>18% : </strong>Acceptable</li>
+                        <li><strong>1% : </strong>Excellent</li>
+                        <li><strong>4% : </strong>Ne savent pas</li>
+                    </ul>
+
+                    <!--Partie 3 : Est-ce que tous les jeux peuvent devenir accessible ?-->
+                    <h3 id="tousLesJeuxAccessibles"><strong>Est-ce que tous les jeux peuvent devenir accessibles ?</strong></h3>
+                    <p>
+                        Non, car il existe des jeux qui sollicitent un sens en particulier et il sera très difficile voire impossible 
+                        d’y jouer si on n’a plus d’accès à ce dernier : Jeu de simulation de pilotage, il est claire que l’aspect visuel 
+                        est primordial, quand il y a une vingtaine de signaux qui clignotent simultanément, il est difficile pour une 
+                        personne ayant une déficience visuel d’en percevoir. C’est ce qu’on appelle un jeu à expérience sensorielle 
+                        spécifique. En revanche, il faudra rendre le jeu accessible dès que possible. “L’idée n’est pas de les laisser 
+                        piloter l’avion, mais plutôt les faire monter le plus vite possible”.
+                    </p>
+                </div>
+            </div>
+
         </main>
 
         <!----------------------------------------------- footer ------------------------------------------------->
-        <footer class="p-3"></footer>
+        <footer role="contentinfo" class="p-3 mt-auto"></footer>
 
         
 

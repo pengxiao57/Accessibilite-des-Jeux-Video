@@ -8,24 +8,377 @@
         <link href="CSS/header.css" rel="stylesheet">
         <link href="CSS/nav.css" rel="stylesheet">
         <link href="CSS/footer.css" rel="stylesheet">
+        <link href="CSS/article.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JavaScript/load.js"></script>
     </head>
     <body>
+        <a class="evitement" href="#contenu">Aller au contenu</a>
         <!----------------------------------------------- header ------------------------------------------------->
-        <header id="header" class="pb-2">
+        <header role="banner" id="header" class="pb-2">
         </header>
 
         <!----------------------------------------------- nav ------------------------------------------------->
-        <nav class="container-fluid pt-3 pb-2"></nav>
+        <nav role="navigation" class="container-fluid pt-3 pb-2 position-relative"></nav>
         
         <!----------------------------------------------- main ------------------------------------------------->
-        <main class="container-fluid h-100">
-        <!--Contenu-->
+        <main role="main" class="container-fluid h-100">
+            <a id="contenu" tabindex="-1"></a>
+            <div class="row d-flex align-items-stretch">
+                <!---------------------------------Sidebar------------------------------------------->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 div_vertical_nav" role="navigation" tabindex="0">
+                    <ul class="stepper d-flex flex-column mt-5 ml-2 list-unstyled position-sticky top-0 pt-3">
+                        <li class="d-flex mb-1">
+                            <div class="d-flex flex-column align-items-center div_circle_container">
+                                <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                <div class="line h-100"></div>
+                            </div>
+                            <div class="div_vertical_nav_a">
+                                <a href="#xbox" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Xbox Adaptative Controller</a>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100 d-none"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#logitech" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Logitech Kit Adaptative</a> 
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------Contenu------------------------------------------->
+                <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                    <!--Titre de la page-->
+                    <h2 class="text-center mb-5 mt-2"><strong>Les supports matériels pour aider l'accessibilité dans les jeux vidéo</strong></h2>
+                    
+                    <!--Partie 1 : Xbox Adaptative Controller-->
+                    <h3 id="xbox"><strong>Xbox Adaptative Controller</strong></h3>
+                    <p>
+                        Un contrôleur adaptatif XBox qui permet de connecter des périphériques externes 
+                        afin de jouer à des jeux sur console. Par exemple, un pédale pour remplace la touche “tirer” dans les jeux 
+                        de type FPS (First Person Shooter / Tir à la première personne).
+                    </p>
+                    <!-- !!! Attention !!! à supprimer dans la version finale-->
+                    <!--<iframe src="https://www.youtube.com/embed/aSJDo_go9zE" style="display: none;"></iframe>-->
+                    <!-- !!! Attention !!! à supprimer dans la version finale-->
+
+                    <div class="ratio mx-auto d-block div_video">
+                        <iframe class="mx-auto d-block" src="https://www.youtube.com/embed/aSJDo_go9zE" 
+                        title="Vidéo YouTube : Découvrez le contrôleur adaptatif XBOX"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mb-2 mt-2" data-bs-toggle="collapse" data-bs-target="#collapseXbox" aria-expanded="false">
+                        Lire la transcription textuelle de la vidéo
+                    </button>
+                    <div id="collapseXbox" class="collapse mt-3">
+                        <h4>Transcription textuelle de la vidéo - "Découvrez le contrôleur adaptatif XBOX"</h4>
+                        <p>
+                            <i>[Une introduction de la vidéo avec le logo Microsoft. Philippe Trotin, responsable d'accessibilité de Microsoft 
+                                France au premier plan. Derrière lui, un grand écran qui illustre le contrôleur adaptatif XBOX.]
+                            </i>
+                        </p>
+                        <p>
+                            Bonjour, je m'appelle Phillipe Trotin. Je suis responsable de l'accessibilité numérique chez Microsoft 
+                            et je vais vous présenter aujourd'hui le Xbox adaptative controller.
+                        </p>
+                        <p>
+                            <i>[Sur l'écran au fond, on voit la structure de la packaging, avec le contrôleur tout en haut facilement
+                                accessible, en-dessous on trouve le mode d'emploi.]
+                            </i>
+                        </p>
+                        <p>
+                            C'est un contrôleur qui fonctionne à la fois sur Windows et sur Xbox et les équipes Xbox ont pensé à tout, 
+                            puisque dès l'ouverture du packaging de Xbox, on a un packaging qui est accessible, ça veut dire qu'avec 
+                            un minimum de manipulation je vais pouvoir ouvrir la boîte associée à ce contrôleur et permettre ainsi à 
+                            des personne en situation de handicap d'accéder à cette fameuse manette. 
+                        </p>
+                        <p>
+                            La manette est constituée de deux gros boutons circulaire, de flèches de direction et principalement d'un 
+                            ensemble de connecteurs derrière la manette qui permettent de connecter des dispositifs externes avec une 
+                            simple prise RJ45.
+                        </p>
+                        <p>
+                            <i>[Sur l'écran au fond, une fiche descriptive du contrôleur apparaît. on peut voir deux grands 
+                                boutons au centre, les flèches directionnelles en bas à gauche, puis les prises permettant 
+                                de remplacer les fonctions du jeu par des périphériques externes se trouvent à l'avant.]
+                            </i>
+                        </p>
+                        <p>
+                            À quoi ça sert ? j'ai pris un exemple qui correspond à une pédale qu'on peut manipuler à pied. Cette 
+                            pédale, je vais pouvoir la connecter sur un des boutons de la manette Xbox et à partir de ce moment-là, 
+                            la fonction correspondante au bouton sur lequel j'ai branché la manette va pouvoir être remplacée par 
+                            une utilisation a pied. Donc j'aurai juste à cliquer sur le dispositif pour pouvoir par exemple tirer 
+                            dans un jeu d'action. 
+                        </p>
+                        <p>
+                            <i>[Sur l'écran au fond, on voit l'avant du contrôleur, il y a une dizaine de prises RJ45, chaque 
+                                fonctionnalité de la manette Xbox peut être remplacé par un périphérique externe via une prise.
+                                Par exemple, la flèche vers le haut ou la gachette gauche. Sur l'image, quelques prise ont été 
+                                occupées par des périphériques externes.]
+                            </i>
+                        </p>
+                        <p>
+                            Un deuxième mode qui est relativement intéressant, c'est la possibilité de reprendre une manette 
+                            traditionnelle Xbox et de la brancher sur cette manette adaptative via des petits ports USB qui se 
+                            situent sur les côtés de la manette. À partir du moment où j'ai connecté cette manette et que je 
+                            l'ai paramétré au niveau de ma Xbox, je vais être capable de jouer en mode copilote. Ça veut que 
+                            la manette adaptative va pouvoir être utilisée par un joueur en situation de handicap qui va utiliser 
+                            un certain nombre de fonctions à travers ces dispositifs externes et être accompagné par un deuxième 
+                            joueur qui va jouer le même personnage que lui dans le jeu mais avec une manette traditionnelle. Donc 
+                            on va avoir un vrai partenariat entre le joueur assistant copilote et le joueur en situation de handicap. 
+                        </p>
+
+                        <p>
+                            Quels sont les types de dispositifs externes qui peuvent exister ? Il y a par exemple ce que je viens de 
+                            montrer, une petite pédale à pied, mais on peut très bien avoir des contacteurs qu'on va manipuler 
+                            avec les mains, voire même poser des électrodes sur un certain nombre de ses muscles et en contractant 
+                            simplement son muscle, on va pouvoir activer la fonction nécessaire. Donc il existe une multiplicité 
+                            de scénarios possibles avec ces dispositifs externes. 
+                        </p>
+
+                        <p>
+                            <i>[Sur l'écran au fond, on voit les différents périphériques possibles, par exemple un bouton externe, 
+                                ou encore des gachettes externes]
+                            </i>
+                        </p>
+
+                        <p>
+                            Alors l'intérêt de tout ça, c'est quoi ? C'est le fait de dire tous les fabricants de dispositifs 
+                            externes n'auront plus à se poser la question de la complexité d'envoyer un signal particulier à 
+                            la Xbox mais ont simplement besoin à travailler sur leurs dispositifs externes et vont disposer d'un 
+                            hub centralisé qui va permettre de recevoir une multiplicité de connecteurs différents. Donc Microsoft 
+                            vend ce type de dispositif quasiment à prix d'une manette standard, on va compter entre 80 et 90 euros. 
+                            Donc on va être complété avec les dispositifs externes qui sont relativement peu coûteux. Alors ceci 
+                            est relativement intéressant puis les manettes adaptées à certains joueurs en situation de handicap 
+                            coûte relativement cher dans la mesure où c'est souvent du sur-mesure.
+                        </p>
+                        <p>
+                            Voilà, j'espère que cette manette adaptative fera les beaux jours à des personnes en situation de handicap 
+                            afin qu'ils puissent être inclues aussi dans les situations de jeu vidéo. Je vous remercie de m'avoir 
+                            écouté.
+                        </p>
+                    </div>
+
+                    <!--Partie 2 : Logitech Kit Adaptative-->
+                    <h3 id="logitech" class="mt-2"><strong>Logitech Kit Adaptative</strong></h3>
+                    <p>
+                        Un regroupement de grands boutons, petits boutons, boutons lumineux et de gâchettes qui peuvent être branchés 
+                        sur Xbox Adaptative Controller. L’avantage d’un tel dispositif est la possibilité de regrouper les équipements 
+                        comme on veut, une sorte de manette personnalisable. Ces dispositifs permettent d’inclure des joueurs ayant des 
+                        mobilités réduites ou de handicap moteur.
+                    </p>
+
+                    <div class="ratio mx-auto d-block div_video">
+                        <iframe src="https://www.youtube.com/embed/DnHOFfLCpig" lang="en"
+                        title="Vidéo YouTube : Découvrez Logitech Adaptive Gaming Kit" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mb-2 mt-2" data-bs-toggle="collapse" data-bs-target="#collapseLogitech" aria-expanded="false">
+                        Lire la transcription textuelle de la vidéo
+                    </button>
+                    <div id="collapseLogitech" class="collapse mt-3">
+                        <h4>Transcription textuelle de la vidéo - "Découvrez Logitech Adaptive Gaming Kit"</h4>
+                        <p>
+                            <i>[Une introduction de la vidéo avec une vue à l'extérieur, on voit le bâtiment avec le logo de Logitech. 
+                                Puis une vue à l'intérieur du bâtiment avec un homme qui travaille sur son bureau, on y voit beaucoup 
+                                d'ordinateurs et des appareils électroniques. Un autre homme à côté de son bureau, commence à expliquer.]
+                            </i>
+                        </p>
+                        <p>
+                            Fondamentalement chez Logitech, on est persuadé que la vie est plus joyeuse en s'amusant. C'est pourquoi on 
+                            pense que tout le monde devrait être en capacité de pouvoir profiter la joie procurée par les jeux. Ayant un 
+                            un partenariat très proche avec Microsoft, quand ils sont venus nous voir en disant qu'ils sont en train 
+                            de travailler sur l'accessibilité des jeux, ils ne pourront pas nous dire ce que c'est mais ils ont besoin de 
+                            notre aide, on savait qu'il faudra faire le bon choix.
+                        </p>
+                        <p>
+                            <i>[Un changement de plan, on a une vue à l'extérieur et on voit la laboratoire technologique inclusive de 
+                                Microsoft, Son directeur, Bryce Johnson, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Nous sommes ravis d'apprendre qu'on a une entreprise partenaire qui est aussi impatiente que nous de travailler 
+                            dans ce domaine. Dès le début, Logitech a rapidement compris ce qu'on a essayé de faire, nous étions sur la même 
+                            longueur d'onde pour épauler des joueurs en situation de handicap. On a commencé par leur expliquer ce qu'ils 
+                            pourront participer dans ce éco-système.
+                        </p>
+                        <p>
+                            <i>[Le responsable de Logitech reprend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Quand on a rencontré Bryce pour la première fois et on a vu le contrôleur adaptatif de Xbox, on était agréablement 
+                            surpris. Cela nous a donner de l'inspiration pour continuer cette route avec eux.
+                        </p>
+                        <p>
+                            <i>[Un mur avec une dizaine de photos, Elles sont toutes des personnes en stuation de handicap aidées par Microsoft, 
+                                on peut voir en haut un message de remerciement. Liz Power, Ergothérapeute, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Avec Le développement de contrôleur adaptatif Xbox, Microsoft a en effet lancé un appel à toutes ces entreprises 
+                            (qui fabriquent de périphériques externes).
+                        </p>
+                        <p>
+                            <i>[Steven Spohn, chef des opérations, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Le fait de jouer permet en général l'intégration de l'individu dans la société que l'on désire tous. 
+                            Alors que le contrôleur adaptatif de Xbox essaie de nous aider à faire le bond en avant, seul, c'est juste le 
+                            point de départ.
+                        </p>
+                        <p>
+                            <i>[Le responsable de Logitech reprend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Quand on a vu pour la première fois le contrôleur adaptatif de Xbox, on réalise que c'était seulement le 
+                            début, et il y avait une série de périphériques et d'équipements différents que les joueurs doivent acheter 
+                            pour déverouiller véritablement toutes ses potentialités. Nous, on a la responsabilité de le faire et de le 
+                            faire bien.
+                        </p>
+
+                        <p>
+                            <i>[Le responsable inclusif, Bryce, reprend la parole.]
+                            </i>
+                        </p>
+
+                        <p>
+                            Ce que Logitech a fait c'est principalement d'aider les personnes en créant une série de nouveaux 
+                            boutons et interrupteurs et cela a permis beaucoup de monde à pouvoir enfin profiter les jeux.
+                        </p>
+                        <p>
+                            <i>[Sur l'écran, on voit des périphériques externes proposés par Logitech, on peut distinguer notamment 
+                                un grand bouton, un petit bouton et des gachettes externes, au milieu, on voit le titre "Logitech 
+                                gaming kit". Mark Starrett, Chef de produit, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Le Kit de jeu adaptatif Logitech est conçu pour le contrôleur adaptatif Xbox. C'est un regroupement 
+                            de grands boutons, petits boutons, des boutons tactiles lumineux et des gachettes externes. Les 
+                            joueurs peuvent les brancher dans l'ordre qu'ils veulent et les utiliser comme ils veulent. Ils peuvent 
+                            les disposer sur leur chaise ou sur notre support. Il y a une infinité de cas d'usage possible et cela 
+                            a motivé toute l'équipe. Microsoft les a testé avec nous dans leurs laboratoires. On les a testé avec 
+                            beaucoup d'utilisateurs. En voyant les personnes jouent et la joie qu'ils dégagent lors qu'ils 
+                            réalisent qui'ils puissent profiter à nouveau les jeux vidéo, c'est juste incroyable.
+                        </p>
+                        <p>
+                            <i>[Steven Spohn, chef des opérations, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Il y a plus de 46 million de joueurs en situation de handicap aux USA, qui voudraient juste profiter 
+                            les jeux, qui ont juste besoin un peu d'aide pour le faire, alors, le kit adaptatif de jeu va constituer 
+                            la différence entre jouer et ne pas jouer du tout.
+                        </p>
+                        <p>
+                            <i>[Cherry Thompson, la spécialiste de l'accessibilité des jeux vidéo, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Ce que j'apprécie particulièrement de ce projet, c'est à quel point il est magnifique pour les joueurs 
+                            en situation de handicap. En voyant quelque chose conçue pour les joueurs en situation de handicap qui 
+                            est soutenue par les autres équipements de Logitech, c'est juste (incroyable). Cela démontre que les 
+                            joueurs en situation de handicap aiment autant les jeux vidéo que les autres. Le kit adaptatif du jeu va 
+                            créer une sensation d'indépendance. On aura la possibilité de les regrouper dans l'ordre qu'on veut, comme 
+                            les contrôleurs traditionnels. Il te permet de l'adapter dans ton expérience de jeu.
+                        </p>
+                        <p>
+                            <i>[John Porter, le spécialiste du design centré humain, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Ayant la possibilité de jouer à ces jeux pour la première fois avec la technologie comme celui-ci, 
+                            j'ai vriament une sensation de liberté.
+                        </p>
+                        <p>
+                            <i>[Richard, Joueur en situation de handicap, prend la parole]
+                            </i>
+                        </p>
+                        <p>
+                            Juste parce que tu nous vois dans notre chaise ne signifie pas qu'on n'est pas capable (de jouer).
+                        </p>
+                        <p>
+                            <i>[Jamie Beenen, joueuse en situation de handicap, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Je suis maintenant capable de jouer les jeux, donc le fait de savoir que je ne suis plus limitée comme 
+                            avant me donne l'impression d'être un peu moins "spéciale".
+                        </p>
+
+                        <p>
+                            <i>[Au premier plan, on voit le titre "Le centre de recherche sur la réhabilitation à Mount Sinai", et 
+                                au second plan, on voit des chercheurs qui testent des équipements avec les joueurs en situation de 
+                                handicap. David Putrino, le directeur du centre, prend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Une des choses que notre centre a découvert est que ce n'est pas seulement que les jeux qui vous obligent 
+                            à effectuer beaucoup de répétitions qui vous aident à rétablir. C'est aussi le fait d'avoir du plaisir 
+                            pendant que vous jouez.
+                        </p>
+                        <p>
+                            <i>[Sur l'écran, on voit beaucoup de joueurs en situation de handicap qui sourient.]
+                            </i>
+                        </p>
+                        <p>
+                            Le plaisir détermine le résultat de la thérapie, et c'est vraiment important pour le rétablissement 
+                            neurologique.
+                        </p>
+                        <p>
+                            <i>[Le directeur de Logitech, reprend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Je suis vraiment fier de notre équipe pour le travail qu'on a fait, mais je suis aussi reconnaissant pour 
+                            tous nos partenaires, car nous ne pouvons pas le faire sans eux. Microsoft, les experts d'effet spécial, 
+                            l'équipe du centre de recherche de réhabilitation à Mount Sinai et les experts chez AbleGamers. Ils nous 
+                            ont vraiment beaucoup aidé et j'apprécie leur soutien.
+                        </p>
+                        <p>
+                            <i>[Richard, Joueur en situation de handicap, reprend la parole]
+                            </i>
+                        </p>
+                        <p>
+                            En ligne, tu ne peux pas voir le fait que je suis une peronne à fauteil roulante, tu ne peux pas voir 
+                            le fait que j'utilise un contrôleur adaptatif. Tout ce que tu vois est un avatar dans le jeu qui joue, 
+                            qui fait exactement ce que les autres font. Maintenant, avec le contrôleur adaptatif, on a définitivement 
+                            passé le cap.
+                        </p>
+                        <p>
+                            <i>[Le directeur de Logitech, reprend la parole.]
+                            </i>
+                        </p>
+                        <p>
+                            Donc je suis très fier de ce qu'on a accompli mais d'un autre côté, nous devrions déjà avoir 
+                            fait ceci. Donc je voudrais juste que les gens sachent que nous ne sommes pas les seuls et le travail 
+                            ne s'arrête pas là. C'est le début d'une aventure et ce n'est que le point de départ.
+                        </p>
+
+                        <p>
+                            <i>[Un message de fin sur l'écran : "Keep Playing" et le logo de Logitech]
+                            </i>
+                        </p>
+
+                    </div>
+
+                    
+                </div>
+            </div>
         </main>
 
         <!----------------------------------------------- footer ------------------------------------------------->
-        <footer class="p-3"></footer>
+        <footer role="contentinfo" class="p-3"></footer>
 
         
 

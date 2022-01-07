@@ -8,24 +8,114 @@
         <link href="CSS/header.css" rel="stylesheet">
         <link href="CSS/nav.css" rel="stylesheet">
         <link href="CSS/footer.css" rel="stylesheet">
+        <link href="CSS/article.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JavaScript/load.js"></script>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
+        <a class="evitement" href="#contenu">Aller au contenu</a>
         <!----------------------------------------------- header ------------------------------------------------->
-        <header id="header" class="pb-2">
+        <header role="banner" id="header" class="pb-2">
         </header>
 
         <!----------------------------------------------- nav ------------------------------------------------->
-        <nav class="container-fluid pt-3 pb-2"></nav>
+        <nav role="navigation" class="container-fluid pt-3 pb-2 position-relative"></nav>
         
         <!----------------------------------------------- main ------------------------------------------------->
-        <main class="container-fluid h-100">
-        <!--Contenu-->
+        <main role="main" class="container-fluid h-100">
+            <a id="contenu" tabindex="-1"></a>
+            <div class="row d-flex align-items-stretch">
+                <!---------------------------------Sidebar------------------------------------------->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 div_vertical_nav" role="navigation" tabindex="0">
+                    <ul class="stepper d-flex flex-column mt-5 ml-2 list-unstyled position-sticky top-0 pt-3">
+                        <li class="d-flex mb-1">
+                            <div class="d-flex flex-column align-items-center div_circle_container">
+                                <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                <div class="line h-100"></div>
+                            </div>
+                            <div class="div_vertical_nav_a">
+                                <a href="#commencement" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Le secteur de jeu vidéo s'y met à l'accessibilité</a>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#reseaux" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">L'accessibilité des jeux aidée par les réseaux sociaux</a> 
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100 d-none"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#loi" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">La législation</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------Contenu------------------------------------------->
+                <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                    <!--Titre de la page-->
+                    <h2 class="text-center mb-5 mt-2"><strong>La situation actuelle de l'accessibilité dans les jeux vidéo</strong></h2>
+                            
+                    <!--Partie 1 : Le secteur de jeu vidéo commence à réfléchir sur l'accessibilité-->
+                    <h3 id="commencement"><strong>Le secteur de jeu vidéo commence à réfléchir sur l'accessibilité</strong></h3>
+                    <p>
+                        Ubisoft a inclut le sous-titre des cinématiques dans sa série Assassin Creed, il est d’abord une option à activer, 
+                        puis une option par défaut, aujourd’hui 95% des joueurs gardent les sous-titres pour les cinématiques. Ils ont
+                        également inclus des joueurs en situation de handicap dès le début du processus de développement et pendant les tests 
+                        d’utilisateurs, ils sont invités à tester le jeu en mode accessible pour vérifier si oui ou non ils ont répondu aux 
+                        besoins de ces personnes.
+                    </p>
+                    <p>
+                        "The last of us II" a remporté le prix “le jeu le plus accessible” en 2020 en incluant 60 fonctionnalités propres à 
+                        l’accessibilité. Par exemple, on peut adapter le niveau de difficulté dans le jeu. C'est très utile pour les 
+                        personnes en situation de handicap cognitif ou intellectuel qui aiment, eux aussi, des jeux de stratégie.
+                    </p>
+
+                    <!--Partie 2 : Accessibilité mise en avant grâce aux réseaux sociaux-->
+                    <h3 id="reseaux"><strong>Accessibilité mise en avant grâce aux réseaux sociaux</strong></h3>
+                    <p>
+                        L’expansion rapide des réseaux sociaux et des sites de streaming ont favorisé la réflexion sur l’accessibilité dans 
+                        les jeux vidéo. De nos jours, il est facile d’entrer en contact avec un utilisateur, que ce soit par le biais de 
+                        réseaux sociaux, streaming ou autres. 
+                    </p>
+                    <p>
+                        En 2016, le studio Naughty Dog a mis en relation un UI designer avec un joueur en situation de handicap via les 
+                        réseaux sociaux. La discussion a provoqué la réflexion puis la mise en place des options d’accessibilité dans le menu 
+                        du jeu Uncharted 4.
+                    </p>
+
+                    <p>
+                        Sur le site de streaming, on a de plus en plus de streamers(ses) qui représentent les joueurs en situation de 
+                        handicap. Grâce aux sites de streaming, ces joueurs savent s’ils peuvent jouer au jeu ou pas avant de l’acheter. 
+                        Les studios se servent aussi de ces sites pour leur envoyer des copies de jeu. 2 raisons principales justifient ce 
+                        choix : d’une part pour informer les joueurs handicapés de l’accessibilité du jeu et de l’autre, voir leurs manières 
+                        d’interagir avec le jeu pour avoir un feedback.
+                    </p>
+
+
+                    <!--Partie 3 : L'accessibilité numérique renforcée par la législation-->
+                    <h3 id="loi"><strong>L'accessibilité numérique renforcée par la législation</strong></h3>
+                    <p>
+                        European Accessibility Act proposé en 2015 puis approuvé 2019 ont indiqué que tous les outils technologiques 
+                        doivent être utilisés convenablement par des personnes en situation de handicap.
+                    </p>
+                </div>
+            </div>
         </main>
 
         <!----------------------------------------------- footer ------------------------------------------------->
-        <footer class="p-3"></footer>
+        <footer role="contentinfo" class="p-3 mt-auto"></footer>
 
         
 

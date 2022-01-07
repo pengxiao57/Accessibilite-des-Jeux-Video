@@ -8,24 +8,97 @@
         <link href="CSS/header.css" rel="stylesheet">
         <link href="CSS/nav.css" rel="stylesheet">
         <link href="CSS/footer.css" rel="stylesheet">
+        <link href="CSS/article.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="JavaScript/load.js"></script>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
+        <a class="evitement" href="#contenu">Aller au contenu</a>
         <!----------------------------------------------- header ------------------------------------------------->
-        <header id="header" class="pb-2">
+        <header role="banner" id="header" class="pb-2">
         </header>
 
         <!----------------------------------------------- nav ------------------------------------------------->
-        <nav class="container-fluid pt-3 pb-2"></nav>
+        <nav role="navigation" class="container-fluid pt-3 pb-2 position-relative"></nav>
         
         <!----------------------------------------------- main ------------------------------------------------->
-        <main class="container-fluid h-100">
-        <!--Contenu-->
+        <main role="main" class="container-fluid h-100">
+            <a id="contenu" tabindex="-1"></a>
+            <div class="row d-flex align-items-stretch">
+                <!---------------------------------Sidebar------------------------------------------->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 div_vertical_nav" role="navigation" tabindex="0">
+                    <ul class="stepper d-flex flex-column mt-5 ml-2 list-unstyled position-sticky top-0 pt-3">
+                        <li class="d-flex mb-1">
+                            <div class="d-flex flex-column align-items-center div_circle_container">
+                                <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                <div class="line h-100"></div>
+                            </div>
+                            <div class="div_vertical_nav_a">
+                                <a href="#conscience" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Les raisons du manque de l'accessibilité</a>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#absence" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Absence des personnes en situation de handicap dans les studios</a> 
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-1">
+                            <div class="d-flex mb-1">
+                                <div class="d-flex flex-column align-items-center div_circle_container">
+                                    <div class="rounded-circle py-3 px-3 mb-1 div_circle"></div>
+                                    <div class="line h-100 d-none"></div>
+                                </div>
+                                <div class="div_vertical_nav_a">
+                                    <a href="#contrainte" class="d-block pb-5 pt-1 text-decoration-none fw-bold a_vertical_nav" tabindex="0">Contrainte de temps</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------Contenu------------------------------------------->
+                <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                    <!--Titre de la page-->
+                    <h2 class="text-center mb-5 mt-2"><strong>Les raisons du manque de l'accessibilité dans les jeux vidéo</strong></h2>
+                    
+                    <!--Partie 1 : Nous n'avons pas encore conscience des joueurs ou des joueuses handicapés-->
+                    <h3 id="conscience"><strong>Nous n'avons pas encore conscience des joueurs ou des joueuses handicapés dans les jeux</strong></h3>
+                    <p>
+                        Dans le monde du jeu vidéo, on n’a pas conscience de l’existence des joueurs ayant des capacités différentes
+                         pour jouer un jeu. Pour en remédier, il faut commencer par en prendre conscience. En effet, leurs vies ne 
+                         sont pas dédiées qu’aux soins, elles ont également des loisirs, comme les jeux vidéo, et en 2020, cela 
+                         surprend encore des personnes.
+                    </p>
+
+                    <!--Partie 2 : Absence des personnes handicapées dans les studios-->
+                    <h3 id="absence"><strong>Absence des personnes en situation de handicap dans les studios</strong></h3>
+                    <p>
+                        Une des raisons du manque d’accessibilité dans les jeux étant que encore trop peu de travailleurs handicapés 
+                        sont présents dans les studios, sans leurs remarques et retours d’expérience, il est quasi impossible d’avoir 
+                        conscience des barrières qui empêchent les joueurs handicapés de profiter pleinement du jeu.
+                    </p>
+
+                    <!--Partie 3 : Contrainte de temps-->
+                    <h3 id="contrainte"><strong>Contrainte de temps</strong></h3>
+                    <p>
+                        Une autre raison qui explique le manque d’accessibilité dans les jeux est la contrainte de temps de production. 
+                        La production d’un jeu prend en général 3 à 5 ans, une fois la production lancée, il sera difficile de réajuster 
+                        le jeu pour l’ajout des fonctionnalités d’accessibilité, car c’est coûteux en temps et en ressource, il faudra 
+                        revoir le jeu et faire des modifications sur la production en cours. C’est pourquoi il est important d’inclure 
+                        l'accessibilité dès le début du processus.
+                    </p>
+                </div>
+            </div>
         </main>
 
         <!----------------------------------------------- footer ------------------------------------------------->
-        <footer class="p-3"></footer>
+        <footer role="contentinfo" class="p-3 mt-auto"></footer>
 
         
 

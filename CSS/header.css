@@ -14,3 +14,13 @@ header
     /*color: var(--bs-white);*/
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(304deg) brightness(108%) contrast(101%);
 }
+
+.a_home
+{
+    color: var(--bs-white);
+}
+
+.a_home:hover
+{
+    color: var(--bs-white);
+}

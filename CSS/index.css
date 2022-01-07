@@ -1,3 +1,8 @@
+:root
+{
+    --bs-green: #04AA6D;
+}
+
 html, body 
 {
     font-size: 14pt;
@@ -22,3 +27,41 @@ main
     border-left: 0.5rem solid var(--bs-white);
     border-right: 0.5rem solid var(--bs-white);
 }
+
+#btn_stop
+{
+    color: var(--bs-white);
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-800);
+}
+
+#btn_stop:hover
+{
+    color: var(--bs-white);
+    background-color: var(--bs-gray-900);
+    border-color: var(--bs-gray-900);
+}
+
+#btn_stop:focus
+{
+    border: 0.15rem solid var(--bs-white);
+}
+
+.hors_ecran
+{
+    position: absolute;
+    left: -999999rem;
+}
+
+a.evitement {
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    padding: .5em;
+    position: absolute;
+    left: -99999rem;
+    z-index: 100;
+ }
+ a.evitement:focus {
+    left: 0;
+ }
